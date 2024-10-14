@@ -78,6 +78,7 @@ public record TrinketsCompat(boolean preventAddition) implements GraveInventoryM
     @Override
     public boolean moveToPlayerClosest(ServerPlayerEntity player, ItemStack stack, int intended, NbtElement extraData) {
         var inventory = player.getInventory();
+
         if (!stack.isEmpty()) {
             int slot;
             try {
